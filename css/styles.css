@@ -1,0 +1,139 @@
+:root {
+    --Yellow: hsl(47, 88%, 63%);
+    --White: hsl(0, 0%, 100%);
+    --Gray-500: hsl(0, 0%, 42%);
+    --Gray-950: hsl(0, 0%, 7%);
+
+    --Font-Family: 'Figtree', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--Font-Family);
+    background-color: var(--Yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    background-color: var(--White);
+    padding: 2.4rem;
+    border-radius: 2rem;
+    border: 0.1rem solid var(--Gray-950);
+    filter: drop-shadow(0.8rem 0.8rem 0rem var(--Gray-950));
+    width: 32.7rem;
+}
+
+.card__image {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 1rem;
+    object-position: 50% 50%;
+    display: block;
+}
+
+.card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+    margin: 2.4rem 0;
+}
+
+.card__category {
+    color: var(--Gray-950);
+    padding: 0.4rem 1.2rem;
+    background-color: var(--Yellow);
+    font-size: 1.2rem;
+    font-weight: 800;
+    line-height: 150%;
+    border-radius: 0.4rem;
+}
+
+.card__date {
+    color: var(--Gray-950);
+    font-size: 1.2rem;
+    line-height: 150%;
+    font-weight: 500;
+}
+
+.card__title {
+    color: var(--Gray-950);
+    font-size: 2rem;;
+    line-height: 150%;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.card__title:hover {
+    color: var(--Yellow);
+    cursor: pointer;
+}
+
+.card__text {
+    color: var(--Gray-500);
+    font-size: 1.4rem;
+    line-height: 150%;
+    font-weight: 500;
+}
+
+.card__author {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.card__author-photo {
+    width: 3.2rem;
+    height: 3.2rem;
+}
+
+.card__author-name {
+    color: var(--Gray-950);
+    font-size: 1.4rem;
+    line-height: 150%;
+    font-weight: 800;
+}
+
+@media (min-width: 1024px) {
+    .card {
+        width: 38.4rem;
+    }
+
+    .card__image {
+        max-width: 100%;
+        object-fit: contain; 
+    }
+
+    .card__category {
+        font-size: 1.4rem;
+    }
+
+    .card__date {
+        font-size: 1.4rem;
+    }
+
+    .card__title {
+        font-size: 2.4rem;
+    }
+
+    .card__text {
+        font-size: 1.6rem;
+    }
+}
+
